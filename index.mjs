@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import getMessage from "./user/getMessage.mjs";
 import { scheduleJob } from 'node-schedule';
+import fetch from 'node-fetch';
 
 // Sends a Mastodon post
 async function toot(message, instance, user_token, visibility = 'unlisted') {
